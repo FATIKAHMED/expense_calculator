@@ -10,9 +10,13 @@ function App() {
     { title: "learning", amount: 6000, date: new Date(2023, 9, 10) },
   ];
 
+  const AddExpenseHandler = (expense)=>{
+    console.log(expense)
+  }
+
   return (
     <>
-    <NewExpense/>
+    <NewExpense onAddExpense = {AddExpenseHandler}/>
   <Expenses items={expenses}/>
     </>
   );
